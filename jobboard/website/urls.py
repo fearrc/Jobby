@@ -18,5 +18,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.home,name="home")
+    path('',views.home,name="home"),
+    path('blog.html',views.blog,name="blog"),
+    path('blog_single.html',views.blog_single,name="blog_single"),
+    path('browsejobs.html',views.browsejobs,name="browsejobs"),
+    path('candidates.html',views.candidates,name="candidates"),
+    path('contact.html',views.contact,name="contact"),
+    path('job_post.html',views.job_post,name="job_post"),
+    path('new_post.html',views.new_post,name="new_post"),
 ]

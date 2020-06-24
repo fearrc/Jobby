@@ -31,10 +31,10 @@
 
 
   <body>
-    
+  	  <!-- START Nav -->
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container-fluid px-md-4	">
-	      <a class="navbar-brand" href="index.html">Skillhunt</a>
+	      <a class="navbar-brand" href="{% url 'home' %}">Jobby</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -42,12 +42,12 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="browsejobs.html" class="nav-link">Browse Jobs</a></li>
-	          <li class="nav-item"><a href="candidates.html" class="nav-link">Canditates</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="new-post.html" class="nav-link">Post a Job</a></li>
-	          <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Want a Job</a></li>
+	          <li class="nav-item"><a href="{% url 'browsejobs' %}" class="nav-link">Browse Jobs</a></li>
+	          <li class="nav-item"><a href="{% url 'candidates' %}" class="nav-link">Canditates</a></li>
+	          <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta mr-md-1"><a href="{% url 'new_post' %}" class="nav-link">Post a Job</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{% url 'job_post' %}" class="nav-link">Want a Job</a></li>
 
 	        </ul>
 	      </div>
@@ -61,8 +61,8 @@
       	<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
 	        <div class="col-md-10 d-flex align-items-center ftco-animate">
 	        	<div class="text text-center pt-5 mt-md-5">
-	        		<p class="mb-4">Find Job, Employment, and Career Opportunities</p>
-	            <h1 class="mb-5">The Eassiest Way to Get Your New Job</h1>
+	        		<p class="mb-4">Find Career Opportunities</p>
+	            <h1 class="mb-5">The Easiest Way to Find the Best Job for You</h1>
 							<div class="ftco-counter ftco-no-pt ftco-no-pb">
 			        	<div class="row">
 				          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
@@ -564,7 +564,7 @@
 			                	<span class="icon-heart"></span>
 			                </a>
 		                </div>
-		                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+		                <a href="job-single.html" class="btn btn-primary py-2">Apply to Job</a>
 		              </div>
 		            </div>
 		          </div><!-- end -->
@@ -588,7 +588,7 @@
 			                	<span class="icon-heart"></span>
 			                </a>
 		                </div>
-		                <a href="job-single.html" class="btn btn-primary py-2">Apply Job</a>
+		                <a href="job-single.html" class="btn btn-primary py-2">Apply to Job</a>
 		              </div>
 		            </div>
 		          </div><!-- end -->
@@ -802,7 +802,7 @@
         <div class="row d-flex">
           <div class="col-md-3 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('{% static 'website/mages/image_1.jpg' %}');">
+              <a href="{% url 'blog_single' %}" class="block-20" style="background-image: url('{% static 'website/mages/image_1.jpg' %}');">
               </a>
               <div class="text mt-3">
               	<div class="meta mb-2">
@@ -816,7 +816,7 @@
           </div>
           <div class="col-md-3 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('{%static 'website/images/image_2.jpg' %}');">
+              <a href="{% url 'blog_single' %}" class="block-20" style="background-image: url('{%static 'website/images/image_2.jpg' %}');">
               </a>
               <div class="text mt-3">
               	<div class="meta mb-2">
@@ -830,7 +830,7 @@
           </div>
           <div class="col-md-3 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('{% static 'website/images/image_3.jpg' %}');">
+              <a href="{% url 'blog_single' %}" class="block-20" style="background-image: url('{% static 'website/images/image_3.jpg' %}');">
               </a>
               <div class="text mt-3">
               	<div class="meta mb-2">
@@ -844,7 +844,7 @@
           </div>
           <div class="col-md-3 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('{% static 'website/images/image_4.jpg' %}');">
+              <a href="{% url 'blog_single' %}" class="block-20" style="background-image: url('{% static 'website/images/image_4.jpg' %}');">
               </a>
               <div class="text mt-3">
               	<div class="meta mb-2">
