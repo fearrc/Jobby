@@ -26,4 +26,5 @@ urlpatterns = [
     path('contact.html',views.contact,name="contact"),
     path('job_post.html',views.job_post,name="job_post"),
     path('new_post.html',views.new_post,name="new_post"),
+    path('job_single.html',views.job_single,name="job_single"),
 ]

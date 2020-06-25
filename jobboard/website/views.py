@@ -23,3 +23,6 @@ def job_post(request):
 
 def new_post(request):
 	return render(request,'new_post.html',{})
+
+def job_single(request):
+	return render(request,'job_single.html',{})
